@@ -11,3 +11,6 @@ paprastu inputu. Filtravimas ivyksta tik tada kai vartotojas paspaudzia mygtuka 
 
 P.S Reikalingus HTML elementus prisideti, kaip input, output ir tt
 ------------------------------------------------------------------------------------ */
+
+
+
