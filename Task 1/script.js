@@ -7,28 +7,37 @@ multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
+// ================== funkcijos konstruktorius ==================
+
 function Calc (a,b){
-    this.x = a;
-        this.y = b;
-    this.suma = function () {
-        let sum = this.x + this.y
-        return sum
+
+        this.a = a;
+        this.b = b;
+
+// ================== funkcijos metodai ==================
+
+    this.sum = function () {
+        return  this.a + this.b;
     };
 
-    this.substraction = function  () {
+    this.substraction = function () {
         return this.a - this.b;
     };
     this.multiplication = function () {
-        return this.a * this.b
-    }
+        return this.a * this.b;
+    };
     this.division = function  () {
-        return this.a / this.b
-    }
+        return this.a / this.b;
+    };
 }
+
+// ================== konstruktoriau panaudojimas ==================
 
 const digits = new Calc(8,2);
 
-console.log(digits.suma);
-console.log(digits.substraction);
-console.log(digits.multiplication);
-console.log(digits.division);
+// ================== atvaizdavimas panaudotu metodu ==================
+
+console.log(digits.sum());
+console.log(digits.substraction());
+console.log(digits.multiplication());
+console.log(digits.division());
