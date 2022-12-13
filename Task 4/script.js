@@ -16,15 +16,17 @@ const ENDPOINT = 'cars.json';
 
 fetch(ENDPOINT)
         .then((response) => {
-            return response.json()
+            return response.json();
         })
         .then((data) => {
-           const cars = data
-            createCard(cars.sort((a,b) => a.brand - b.brand))
-            console.log(data[1].brand)
+           const cars = data.sort((a,b) => {
+            if (a.brand < b.brand) {
+              return -1;
+            }});
+            createCard(cars);
         })
 
-// ==================== Function's ====================
+// ==================== Function ====================
 
 function createCard (array) {
     
@@ -42,16 +44,16 @@ function createCard (array) {
         const carList = document.createElement('ul');
         carList.setAttribute('class','car_list');
 
+        for(let i = 0; i < el.models.length; i++ ) {
+
+                    const carListItem = document.createElement('li');
+                    carListItem.setAttribute('class', 'list_item');
+                    carListItem.innerText = el.models[i];
+
+                    carList.append(carListItem);
+                }
+
         div.append(brandHeader, carList);
-        output.append(div);
-
-        for(let i = 0; i < el.models.length; i++ ){
-
-            const carListItem = document.createElement('li');
-            carListItem.setAttribute('class', 'list_item');
-            carListItem.innerText = el.models[i];
-
-            carList.append(carListItem);
-        }
+        output.append(div);   
     });
 }
