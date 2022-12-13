@@ -1,6 +1,7 @@
 /* ------------------------------ TASK 3 ---------------------------------------------------
 Sutvarkykite užduoties "Task 3" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
+// =============== Imports ===============
 
 import { composition } from "./modules/math/composition.js";
 import { division } from "./modules/math/division.js";
