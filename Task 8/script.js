@@ -10,7 +10,9 @@ const state = document.getElementById('btn__state');
 const btn = document.getElementById('btn__element');
 let counter = 0;
 
+//  ============== eevnt listner for button click ==============
+
 btn.addEventListener('click', () => {
     counter++;
     state.innerText = counter;
-})
+});
