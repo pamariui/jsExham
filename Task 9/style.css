@@ -57,6 +57,12 @@ body{
     border-radius: 5px;
 }
 
+@media only screen and (max-width: 800px){
+    #output {
+        width: 90%;
+    }
+}
+
 .card {
     display: flex;
     flex-direction: column;
