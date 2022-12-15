@@ -38,8 +38,8 @@ let duck = {};
 async function renderData() {
 
     const data = await getData();
-    localStorage.setItem('url', data.url)
-    localStorage.setItem('message', data.message)
+    localStorage.setItem('url', data.url);
+    localStorage.setItem('message', data.message);
     quackGenerator(data);
 };
 
@@ -63,7 +63,7 @@ const init = () => {
         img.src = localStorage.getItem('url');
 
         const message = document.createElement('h3');
-        message.innerText = localStorage.getItem('message')
+        message.innerText = localStorage.getItem('message');
         output.append(img,message);
         console.log(localStorage.getItem('url'));
     } else {
@@ -74,10 +74,11 @@ const init = () => {
 
 // =============== initialize ===============
 
-init ()
+init ();
 
 // ===== paspaudus mygtuka uzkrauna nauja antuka =====
+
 btn.addEventListener('click', () => {
-    output.innerText = ""
-    renderData()
+    output.innerText = "";
+    renderData();
 } )
