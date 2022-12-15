@@ -1,0 +1,1 @@
+kazkodel veikia tik atidarius per VS code ir paleidus virtual serveri

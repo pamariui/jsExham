@@ -2,11 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
     <title>Filter</title>
     <!-- Custom JS -->
     <script defer src="./script.js"></script>
   </head>
   <body>
-    
+    <div class="input">
+      <form>
+        <p>Pasirinkite data nuo kurios norite matyti studentus :</p>
+        <input type="date" id="inputDate" min="1990-01-01" max="2099-12-31" format="YYYY-MM-DD"> 
+        <button type="submit" id="btn">Rodyti</button>
+      </form>
+    </div>
+    <h2 id="alert"></h2>
+    <div id="output"></div>
   </body>
 </html>
